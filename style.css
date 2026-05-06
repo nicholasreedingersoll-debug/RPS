@@ -24,7 +24,29 @@ h1 {
     margin-bottom: 30px;
 }
 
-button {
+#paper-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#scissors-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#rock-btn {
     background-color: #4CAF50;
     color: white;
     padding: 15px 30px;
@@ -41,8 +63,12 @@ button:hover {
 
 #reset-btn {
     background-color: #f44336;
-    margin-top: 20px;
-}
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
 
 #reset-btn:hover {
     background-color: #da190b;
@@ -68,4 +94,9 @@ h2, h3 {
 p {
     margin: 10px 0;
     font-size: 16px;
+}
+
+#bst1 {
+    flex-direction: column;
+    justify-content: center;
 }

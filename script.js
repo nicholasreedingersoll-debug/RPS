@@ -1,10 +1,20 @@
+document.getElementById("reset-btn").addEventListener("click", resetGame);
+document.getElementById("rock-btn").addEventListener("click", chosenItem);
+document.getElementById("paper-btn").addEventListener("click", chosenItem);
+document.getElementById("scissors-btn").addEventListener("click", chosenItem);
+document.getElementById("bst1").addEventListener("click");
+document.getElementById("bst3").addEventListener("click");
+document.getElementById("bst5").addEventListener("click");
+
 let choices = ["rock", "paper", "scissors"];
 let playerScore = 0;
 let computerScore = 0;
+let targetScore = 3;
 
 function chosenItem(event) {
   let computerChoice = choices[Math.floor(Math.random() * 3)];
-  let playerChoice = event.target.id;
+  let buttonId = event.target.id;
+  let playerChoice = buttonId.replace("-btn", "");
   let result = getWinner(playerChoice, computerChoice);
   
   updateDisplay(playerChoice, computerChoice, result);
@@ -33,6 +43,7 @@ function updateScore(result) {
   
   document.getElementById("player-score").innerText = playerScore;
   document.getElementById("computer-score").innerText = computerScore;
+  bestOf();
 }
 
 function resetGame() {
@@ -45,7 +56,11 @@ function resetGame() {
   document.getElementById("computer-score").innerText = "0";
 }
 
-document.getElementById("reset-btn").addEventListener("click", resetGame);
-document.getElementById("rock-btn").addEventListener("click", chosenItem);
-document.getElementById("paper-btn").addEventListener("click", chosenItem);
-document.getElementById("scissors-btn").addEventListener("click", chosenItem);
+function bestOf() {
+  if (playerScore == targetScore) {
+    document.getElementById("round-result").innerText = "You won the game!";
+  }
+  if (computerScore == targetScore) {
+    document.getElementById("round-result").innerText = "Computer won the game!";
+  }
+}
