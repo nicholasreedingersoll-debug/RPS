@@ -69,6 +69,7 @@ button:hover {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+}
 
 #reset-btn:hover {
     background-color: #da190b;
@@ -96,7 +97,3 @@ p {
     font-size: 16px;
 }
 
-#bst1 {
-    flex-direction: column;
-    justify-content: center;
-}
